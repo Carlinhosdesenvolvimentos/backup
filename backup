@@ -35,8 +35,8 @@ async function quantidadeUsuarios() {
 
     const data = [
         {
-            x:nomeDasRedes,
-            y:quantidadeUsuarios,
+            x: nomeDasRedes,
+            y: quantidadeUsuarios,
             type: 'bar'
         }
     ]
@@ -44,6 +44,7 @@ async function quantidadeUsuarios() {
     const grafico = document.createElement('div')
     grafico.className = 'grafico'
     document.getElementById('graficos-container').appendChild(grafico)
+    Plotly.newPlot(grafico, data)
 }
 
 quantidadeUsuarios()
